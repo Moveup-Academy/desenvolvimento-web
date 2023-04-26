@@ -1,0 +1,97 @@
+:root {
+  --background-color: #2f2f2f; 
+  --text-color: #e2e2e2;
+  --input-color: #3D3D3D;
+  --border-color: #444444;
+  --primary-color: #00FFC2;
+  --primary-color-900: #009974;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+}
+
+/*
+  Unidades de medida
+  px - pixel (fixa) 1px
+  rem - (relativa) 1rem - 16px
+  % - da mesma forma que vw e vh
+  vw - 100vw (viewport width) tamanho em relacao a largura total da tela
+  vh - 100vh (viewport heigth) tamanho em relacao a altura total da tela
+*/
+
+header {
+  height: 5rem;
+  padding: 1rem;
+  
+  border-bottom: 1px solid var(--text-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  height: calc(100vh - 7rem);
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.input__group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input__group > label {
+  margin-bottom: 0.5rem; 
+}
+
+.input__group > input {
+  width: 300px;
+  
+  padding: 0.5rem;
+  background-color: var(--input-color);
+  border: 1px solid var(--border-color);
+}
+
+button {
+  width: 300px;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+
+  border: none;
+  background-color: var(--primary-color);
+
+  transition: all 0.2s;
+
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--primary-color-900);
+}
+
+footer {
+  height: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-top: 1px solid var(--text-color);
+}
+
+footer > p {
+  font-size: 0.5rem;
+}
